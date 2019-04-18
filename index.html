@@ -42,12 +42,15 @@
       var hitOne = false;
       var jumpCount = 0;
       var bg;
+      var grass;
       function preload(){
         bg = loadImage('bg.jpg');
+        grass = loadImage('grass.png');
         bg.resize(w,h);
       }
       function setup(){
         bg.loadPixels();
+        grass.loadPixels();
         createCanvas(w, h);
       }
       function draw(){
