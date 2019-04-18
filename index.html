@@ -44,10 +44,11 @@
       var bg;
       function preload(){
         bg = loadImage('bg.jpg');
+        bg.resize(w,h);
       }
       function setup(){
-        createCanvas(w, h);
         bg.loadPixels();
+        createCanvas(w, h);
       }
       function draw(){
         background(bg);
