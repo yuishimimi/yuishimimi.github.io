@@ -1,6 +1,6 @@
 function jumper(){
         this.x = 500;
-        this.y = h-230;
+        this.y = h-265;
         this.gravity = 0.5; //the force of gravity is one;
         this.lift = -10;//opposing force actd on when key is pressed
         this.velocity = 0;//start speed of gravity
@@ -19,8 +19,8 @@ function jumper(){
           this.velocity += this.gravity;
           this.y += this.velocity;
           this.velocity *= 0.9;
-          if(this.y > h-220){//stop on floor
-            this.y= h-220;
+          if(this.y > h-265){//stop on floor
+            this.y= h-265;
             this.velocity = 0;//if this.velocity = -10, it can bounce
             jumpCount=0;
           }
