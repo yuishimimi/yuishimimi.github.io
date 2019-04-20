@@ -43,15 +43,18 @@
       var jumpCount = 0;
       var bg;
       var grass;
+      var jp;
       function preload(){
         bg = loadImage('bg.jpg');
         grass = loadImage('grass.png');
         bg.resize(w,h);
+        jp = loadImage('jp.gif');
       }
       function setup(){
         bg.loadPixels();
         grass.loadPixels();
         createCanvas(w, h);
+        jp.loadPixels();
       }
       function draw(){
         background(bg);

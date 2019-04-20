@@ -7,8 +7,7 @@ function jumper(){
         this.width = 50;
         this.height = 50;
         this.show = function(){
-          fill(color('red'));
-          ellipse(this.x, this.y, this.width,this.height);
+          image(jp,this.x, this.y, this.width,this.height);
         }
         this.up = function(){
           if(jumpCount < 2){
