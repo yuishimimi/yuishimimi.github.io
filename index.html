@@ -30,6 +30,7 @@
   <body>
     <h1 id = "scoring"></h1>
     <h1 id = "lose"></h1>
+    <button onclick = "again()"></button>
     <script>
     //GAME IDEA:side scrolling game where the object is constantly bouncing up and down on its own and players must move left or right to jump and avoid another object. speed increases as time flows
     //game idea #2: a vertically scrolling game and the object is at a fixed y-axis and players must go left or right to avoid the "walls"
@@ -75,11 +76,6 @@
         if (hit === true){
           document.getElementById("lose").innerHTML = "you lost, press (r) to reload";
           noLoop();
-          function keyPressed(){
-          if(keyCode(82)){
-           location.href = "index.html";
-          }
-        }
         }
         hitOne = collideRectCircle(
         platform.x,
@@ -94,6 +90,9 @@
           jumper.up();
         }
         document.getElementById("scoring").innerHTML = "you score: " + barrier.score;
+        function again(){
+          location.href = "index.html";
+        }
       }
     </script>
   </body>

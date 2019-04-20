@@ -18,7 +18,7 @@ function barrier(){
       this.score ++;
       this.x = w+100;
       this.y = h-280;
-      this.velocity += 5;
+      this.velocity = 5;
     }
   }
 }
