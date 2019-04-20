@@ -2,7 +2,7 @@ function barrier(){
   this.x = w + 100;
   this.y =h-280;
   this.leftPull =1;
-  this.velocity = 1;
+  this.velocity = 5;
   this.width = 100;
   this.height = 100;
   this.score = 0;
@@ -18,7 +18,7 @@ function barrier(){
       this.score ++;
       this.x = w+100;
       this.y = h-280;
-      this.velocity += .1;
+      this.velocity += 5;
     }
   }
 }
