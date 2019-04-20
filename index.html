@@ -75,9 +75,11 @@
         if (hit === true){
           document.getElementById("lose").innerHTML = "you lost, press (r) to reload";
           noLoop();
+          function keyPressed(){
           if(keyCode(82)){
            location.href = "index.html";
           }
+        }
         }
         hitOne = collideRectCircle(
         platform.x,
