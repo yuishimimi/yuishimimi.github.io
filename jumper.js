@@ -29,7 +29,6 @@ function jumper(){
             this.velocity = 0;
           }
         }
-        
       }
       function keyPressed(){
         if(keyCode === 32){
