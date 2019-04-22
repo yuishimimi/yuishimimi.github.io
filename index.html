@@ -25,23 +25,18 @@
         z-index:+1;
         color:white;
       }
-      .button{
+      #replay{
         position:absolute;
         left:600px;
         top:600px;
         z-index:+1;
-        margin-top: 45px;
-        margin-bottom: 100px;
-        margin-right: 10px;
-        margin-left: 10px;
-        border-radius: 12px;
       }
     </style>
   </head>
   <body>
     <h1 id = "scoring"></h1>
     <h1 id = "lose"></h1>
-    <button onclick>replay</button>
+    <div id = "replay"><button onclick = "again()">replay</button></div>
     
     <script>
     //GAME IDEA:side scrolling game where the object is constantly bouncing up and down on its own and players must move left or right to jump and avoid another object. speed increases as time flows
@@ -84,7 +79,8 @@
           barrier.height,
           jumper.x,
           jumper.y,
-          25);
+          jumper.width,
+          jumper.height);
         if (hit === true){
           document.getElementById("lose").innerHTML = "press the button to:";
           noLoop();
