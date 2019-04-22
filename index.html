@@ -25,12 +25,25 @@
         z-index:+1;
         color:white;
       }
+      #replay{
+        position:absolute;
+        left:600px;
+        top:500px;
+        z-index:+1;
+        color:white;
+        margin-top: 45px;
+        margin-bottom: 100px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 12px;
+      }
     </style>
   </head>
   <body>
     <h1 id = "scoring"></h1>
-    <h1 id = "lose">
-    <button onclick = "again()">replay</button></h1>
+    <h1 id = "lose"></h1>
+    <div id = "replay"><button onclick = "again()">replay</button></div>
+    
     <script>
     //GAME IDEA:side scrolling game where the object is constantly bouncing up and down on its own and players must move left or right to jump and avoid another object. speed increases as time flows
     //game idea #2: a vertically scrolling game and the object is at a fixed y-axis and players must go left or right to avoid the "walls"
@@ -74,7 +87,7 @@
           jumper.y,
           25);
         if (hit === true){
-          document.getElementById("lose").innerHTML = "you lost, press (r) to reload";
+          document.getElementById("lose").innerHTML = "press the button to:";
           noLoop();
         }
         hitOne = collideRectCircle(
