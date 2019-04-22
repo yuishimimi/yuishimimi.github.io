@@ -1,6 +1,6 @@
 function barrier(){
   this.x = w + 100;
-  this.y =h-280;
+  this.y =h-270;
   this.leftPull =1;
   this.velocity = 5;
   this.width = 100;
@@ -17,7 +17,7 @@ function barrier(){
     if(this.x<=0){
       this.score ++;
       this.x = w+100;
-      this.y = h-280;
+      this.y = h-270;
       this.velocity = 5;
     }
   }
