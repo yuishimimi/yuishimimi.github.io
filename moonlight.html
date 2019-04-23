@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src = "p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+    var img;
+    function preload(){
+      img = loadImage("sprink.jpeg");
+    }
+      function setup(){
+        createCanvas(window.innerWidth,window.innerHeight, WEBGL);
+        img.loadPixels();
+      }
+      function draw(){
+        background(255);
+        var locX = mouseX - width/2;
+        var locY = mouseY - height/2;
+        directionalLight(250, 0, 0, -locX, -locY, -175);//(red, green, blue, x-axis, y-axis, z-axis)
+        //opt:pointLight(red, green, blue, width/2, height/2, z-axis)     //tLeft(-,-) tRight(-,+), bLeft(+,-), bRight(+,+)
+        specularMaterial(255);
+        noStroke();
+        texture(img);
+;        //sphere(175);//circle
+        torus(200, 64, 30, 30);//torus(radius of ring, the radius, detailX, detailY)
+}
+    </script>
+  </body>
+</html>
