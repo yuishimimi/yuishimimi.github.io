@@ -5,13 +5,17 @@
   <body>
     <h1 id = "ax"></h1>
     <script>
-    var ax = 0;
+    var ax;
+    var axhigh = 0;
       function setup(){
         createCanvas(window.innerWidth, window.innerHeight)
       }
       function draw(){
         ax = accelerationX;
-        document.getElementById("ax").innerHTML = "X accel = " + ax;
+        if(ax < axhigh){
+          axHigh = ax;
+          document.getElementById("ax").innerHTML = "X accel = " + ax;
+        }
       }
     </script>
   </body>
