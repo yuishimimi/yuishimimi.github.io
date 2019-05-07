@@ -3,22 +3,24 @@
     <script src = "p5.min.js"></script>
   </head>
   <body>
-    <h1 id = "scream"></h1>
+    <h1 id = "rx"></h1>
+    <h1 id = "ry"></h1>
+    <h1 id = "rz"></h1>
     <script>
-    var move = 0;
-      function setup(){
-        createCanvas(window.innerWidth, window.innerHeight);
-      }
-      function draw(){
-        fill(move);
-      }
-      function deviceMoved(){
-        move = move + 5;
-        if(move > 255){
-          move = 0;
-          document.getElementById("scream").innerHTML = move;
-        }
-      }
+    var rz = 0;
+    var rx = 0;
+    var ry = 0;
+    function setup(){
+      createCanvas(window.innerWidth, window.innerHeight);
+    }
+    function draw(){
+      rz = rotationZ;
+      document.getElementById(rz).innerHTML = "Z = " + rz;
+      rx = rotationX;
+      document.getElementById(rx).innerHTML = "X = " + rx;
+      ry = rotationY;
+      document.getElementById(ry).innerHTML = "Y = " + ry;
+    }
     </script>
   </body>
 </html>
